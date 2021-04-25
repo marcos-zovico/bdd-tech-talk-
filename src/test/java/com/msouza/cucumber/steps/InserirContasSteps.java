@@ -100,7 +100,7 @@ public class InserirContasSteps {
     public void beforeStep() throws InterruptedException {
         TimeUnit.MILLISECONDS.sleep(1000);
     }
-git
+
     public void screenshot(Scenario scenario) {
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
