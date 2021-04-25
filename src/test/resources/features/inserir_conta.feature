@@ -5,6 +5,15 @@ Funcionalidade: Cadastro de contas
 	Gostaria de cadastrar contas
 	Para que eu possa administrar meu dinheiro de uma forma mais organizada
 
+#	Contexto:
+#		Dado que estou acessando a aplicação
+#		Quando informo o usuário "msouza@mail.com"
+#		E a senha "123456"
+#		E seleciono entrar
+#		Então visualizo a página inicial
+#		Quando seleciono Contas
+#		E seleciono Adicionar
+
 	Cenário: Deve inserir uma conta com sucesso
 		Dado que estou acessando a aplicação
 		Quando informo o usuário "msouza@mail.com"

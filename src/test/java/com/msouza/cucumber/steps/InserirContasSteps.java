@@ -1,6 +1,7 @@
 package com.msouza.cucumber.steps;
 
 import io.cucumber.java.After;
+import io.cucumber.java.BeforeStep;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
@@ -16,6 +17,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 public class InserirContasSteps {
 
@@ -94,6 +96,11 @@ public class InserirContasSteps {
 		driver.quit();
     }
 
+    @BeforeStep
+    public void beforeStep() throws InterruptedException {
+        TimeUnit.MILLISECONDS.sleep(1000);
+    }
+git
     public void screenshot(Scenario scenario) {
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
