@@ -10,13 +10,15 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.cucumber:cucumber-java:4.8.1'
     implementation 'org.seleniumhq.selenium:selenium-java:3.11.0'
     implementation 'commons-io:commons-io:2.6'
-    testImplementation 'io.cucumber:cucumber-junit:4.8.1'
+    testImplementation 'io.cucumber:cucumber-java:6.10.3'
+    testImplementation 'io.cucumber:cucumber-junit:6.10.3'
 }
 
-test {
-    useJUnitPlatform()
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
 }
 

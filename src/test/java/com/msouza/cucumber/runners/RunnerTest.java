@@ -7,14 +7,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/resources/features/aprender_cucumber.feature",
-		glue = {"cucumber.msouza.steps", "cucumber.msouza.config"},
-	//	tags = {"@unitários", "not @ignore"},
-		plugin = {"pretty", "html:target/report-html", "json:target/report.json"},
-		monochrome = false,
-		snippets = SnippetType.CAMELCASE,
-		dryRun = false,
-		strict = false
+		features = "src/test/resources/features/alugar_filme.feature",
+		glue = {"com.msouza.cucumber.steps"},
+		plugin = {"pretty", "html:build/report-html", "json:build/report.json"},
+		snippets = SnippetType.CAMELCASE
 		)
 public class RunnerTest {
 }
