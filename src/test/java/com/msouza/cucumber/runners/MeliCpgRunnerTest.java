@@ -7,10 +7,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/resources/features/alugar_filme.feature",
-		glue = {"com.msouza.cucumber.steps"},
-		plugin = {"pretty", "html:build/cucumber/report.html", "json:build/cucumber/report.json"},
+		features = "src/test/resources/features/meli_cpg.feature",
+		glue = {"com.msouza.cucumber.steps", "com.msouza.cucumber.hooks"},
+		plugin = {"pretty", "html:build/report.html", "json:build/report.json"},
 		snippets = SnippetType.CAMELCASE
 		)
-public class RunnerTest {
+public class MeliCpgRunnerTest {
+
 }
