@@ -37,11 +37,12 @@ public class MeliCpgSteps {
 
 	@After
 	public void finish() {
-//		driver.quit();
+		driver.quit();
 	}
 
 	@BeforeStep
 	public void beforeStep() throws InterruptedException {
+//		xattr -d com.apple.quarantine chromedriver
 		TimeUnit.MILLISECONDS.sleep(1000);
 	}
 
